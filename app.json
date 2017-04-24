@@ -1,0 +1,6 @@
+{
+  "name": "Slackbox",
+  "description": "Spotify playlist collaboration through Slack.",
+  "repository": "https://github.com/DPoSign/Grouptree-Music-Manager",
+  "keywords": ["slack", "spotify"]
+}
