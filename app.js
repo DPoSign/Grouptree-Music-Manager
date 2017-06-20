@@ -154,8 +154,7 @@ app.post('/store', function(req, res) {
 					  var text = '<@' + userID + '|' + userName + '> added <spotify:track:'+track.id+'|*' + track.name + '* by *' 
 					  + track.artists[0].name + '*> to the playlist ';
 					if (process.env.SPOTIFY_PERMALINK) text += '<spotify:user:' + process.env.SPOTIFY_USERNAME+':playlist:'
-						+process.env.SPOTIFY_PLAYLIST_ID+'K + '|'+process.env.PLAYLIST_NAME+'>';
-					  sendToSlack(text, response_url, 'in_channel');
+						+process.env.SPOTIFY_PLAYLIST_ID+'K + '|'+process.env.PLAYLIST_NAME+'>';					  sendToSlack(text, response_url, 'in_channel');
 					  return;
 					}, function(err) {
 					  sendToSlack(err.message, response_url, 'ephemeral');
@@ -210,5 +209,5 @@ app.post('/store', function(req, res) {
     });
 });
 
-app.set('port', (process.env.PORT || 3000));
+app.set('port', (process.env.PORT || 5000));
 app.listen(app.get('port'));
